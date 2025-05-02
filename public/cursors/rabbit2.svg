@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rabbit body -->
+  <ellipse cx="32" cy="38" rx="16" ry="12" fill="white" />
+  <!-- Rabbit head -->
+  <circle cx="40" cy="28" r="10" fill="white" />
+  <!-- Ears -->
+  <path d="M38 20C38 16 40 8 44 4C44 16 50 16 50 20" fill="white" stroke="white" stroke-width="1" />
+  <path d="M46 22C46 18 48 10 52 6C52 18 58 18 58 22" fill="white" stroke="white" stroke-width="1" />
+  <!-- Face details -->
+  <circle cx="44" cy="26" r="1.5" fill="#FF69B4" />
+  <circle cx="44" cy="26" r="0.75" fill="black" />
+  <!-- Tail -->
+  <circle cx="18" cy="38" r="5" fill="white" />
+  <!-- Legs (running position 1) -->
+  <ellipse cx="26" cy="46" rx="3" ry="5" fill="white" transform="rotate(-15 26 46)" />
+  <ellipse cx="36" cy="48" rx="3" ry="3" fill="white" />
+  <ellipse cx="32" cy="44" rx="2.5" ry="4" fill="white" transform="rotate(25 32 44)" />
+  <ellipse cx="40" cy="44" rx="2.5" ry="4" fill="white" transform="rotate(-25 40 44)" />
+</svg> 
