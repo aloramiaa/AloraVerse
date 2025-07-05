@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import HeartShower from './HeartShower';
 import StarryBackground from './StarryBackground';
-import RabbitCursor from './RabbitCursor';
 
 const VisualEffects = () => {
   const [effects, setEffects] = useState({
     hearts: true,
-    stars: true,
-    rabbitCursor: true
+    stars: true
   });
   
   // Check for saved preferences
@@ -51,13 +49,6 @@ const VisualEffects = () => {
         />
       )}
       
-      {effects.rabbitCursor && (
-        <RabbitCursor 
-          size={50} 
-          speed={0.12} 
-        />
-      )}
-      
       {/* Effects control panel */}
       <div className="fixed bottom-4 right-4 z-50">
         <button 
@@ -92,16 +83,6 @@ const VisualEffects = () => {
               />
               Stars
             </label>
-            
-            <label className="flex items-center gap-2 text-white-50">
-              <input 
-                type="checkbox" 
-                checked={effects.rabbitCursor} 
-                onChange={() => toggleEffect('rabbitCursor')}
-                className="accent-accent"
-              />
-              Rabbit Cursor
-            </label>
           </div>
         </div>
       </div>
@@ -109,4 +90,4 @@ const VisualEffects = () => {
   );
 };
 
-export default VisualEffects; 
+export default VisualEffects;
