@@ -18,7 +18,6 @@ import TermsPage from "./pages/TermsPage";
 import DrivePage from "./pages/DrivePage";
 import StatusPage from "./pages/StatusPage";
 import VisualEffects from "./components/VisualEffects";
-import LoadingBar from "./components/LoadingBar";
 import SEO from "./components/SEO";
 
 // Main homepage component
@@ -42,38 +41,13 @@ const HomePage = () => (
 );
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  // This ensures the page is fully loaded before we show the content
-  useEffect(() => {
-    // Listen for when the window is fully loaded
-    if (document.readyState === 'complete') {
-      // Already loaded, but we still show loading briefly for UX
-      setTimeout(() => setIsLoading(false), 1000);
-    } else {
-      window.addEventListener('load', () => {
-        // The page is fully loaded
-        setTimeout(() => setIsLoading(false), 1000);
-      });
-    }
-  }, []);
-
-  const handleLoadComplete = () => {
-    setIsLoading(false);
-  };
-
   return (
     <Router>
       {/* Default SEO for the entire app, will be overridden by specific pages */}
       <SEO />
-      
-      {/* Show loading bar until content is ready */}
-      {isLoading && <LoadingBar onLoadComplete={handleLoadComplete} />}
-      
       {/* Add visual effects to the entire app */}
       <VisualEffects />
-      
-      <div className={`page-transition ${isLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}`}>
+      <div className="page-transition opacity-100 transition-opacity duration-500">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
